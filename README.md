@@ -69,9 +69,9 @@ docker run --rm -it \
 - 若你要「跟某次 git 結果完全一致」，請一定要固定 `CS1000FVP_REF`，不要只用 branch。
 
 
-## 給老師驗收（一步一步）
+## 一步一步跑起來（新手版）
 
-請參考：`docs/TEACHER_SUBMISSION_GUIDE.md`。
+請參考：`docs/RUN_GUIDE.md`。
 
 若你要一次產生「環境資訊 + 操作紀錄 + 產物清單」，可直接執行：
 
@@ -121,4 +121,4 @@ ls
 
 至少要有：`Dockerfile`、`README.md`、`scripts/`、`docs/`。
 
-6. 然後才執行 B 步驟（設定 GitHub remote / push）。
+6. 然後就可以開始做 GitHub 設定（remote / push）。
