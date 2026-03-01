@@ -1,6 +1,5 @@
 # Corstone-1000 FVP Ubuntu Image：一步一步跑起來（實作版）
 
-> 這份就是「照做就能跑」的版本，不講場面話。
 
 ## 0) 你最後會拿到什麼
 
@@ -30,7 +29,7 @@ docker --version
 
 ---
 
-## 2) 找到專案資料夾（最容易卡在這）
+## 2) 找到專案資料夾
 
 先看你現在在哪：
 
@@ -39,7 +38,7 @@ pwd
 ls
 ```
 
-這份作業常見路徑是：
+常見路徑是：
 
 ```text
 /workspace/1
@@ -61,7 +60,7 @@ ls
 
 ---
 
-## 3) 一鍵跑完整流程（推薦）
+## 3) 一鍵跑完整流程
 
 ```bash
 ./scripts/run_demo_with_logs.sh
@@ -77,7 +76,7 @@ ls
 
 ---
 
-## 4) 想固定版本（避免每次結果飄掉）
+## 4) 想固定版本
 
 ```bash
 CS1000FVP_REF=<commit-or-tag> ./scripts/run_demo_with_logs.sh
@@ -108,19 +107,19 @@ docker run --rm -it \
 
 ---
 
-## 6) 怎麼確認有跑成功
+## 6) 確認有跑成功
 
 看這三個檔：
 
-- `demo-logs/<timestamp>/run.log`（完整過程）
-- `demo-logs/<timestamp>/host-environment.txt`（環境資訊）
-- `demo-logs/<timestamp>/output-files.txt`（輸出清單）
+- `demo-logs/<timestamp>/run.log`
+- `demo-logs/<timestamp>/host-environment.txt`
+- `demo-logs/<timestamp>/output-files.txt`
 
 再看 `out/` 有沒有產物。
 
 ---
 
-## 7) 想錄 demo（終端版）
+## 7) 
 
 ```bash
 script -f demo-logs/manual-terminal.typescript
@@ -130,7 +129,7 @@ script -f demo-logs/manual-terminal.typescript
 
 ---
 
-## 8) 上傳到 GitHub
+## 8) 
 
 ```bash
 git add .
@@ -138,7 +137,7 @@ git commit -m "Add reproducible Corstone-1000 run guide"
 git push origin <你的分支>
 ```
 
-要開 PR（可選）：
+開 PR
 
 ```bash
 gh pr create --fill
