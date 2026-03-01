@@ -1,9 +1,5 @@
 # CS300 Armv9-A FVP Ubuntu Image Build (Docker)
 
-你問「照著做能不能跑出正確結果」：
-
-- **可以提高成功率，但我不會宣稱 100% 保證**。
-- 真正是否「正確」，要以你實際跑出的 artifact 與上游專案說明比對。
 - 這份流程提供：固定化容器環境、可指定 commit/ref、以及最基本的輸出驗證。
 
 ## 功能重點
@@ -16,7 +12,7 @@
   3. `make ubuntu`
   4. `make`
 - 將常見輸出目錄（`build/`、`output/`、`out/`）收集到 `/work/out`。
-- 若沒有任何輸出目錄，腳本會 **直接失敗**（非僅警告）。
+- 若沒有任何輸出目錄，腳本會 直接失敗（非僅警告）。
 
 ## 使用方式
 
@@ -65,8 +61,8 @@ docker run --rm -it \
 
 ## 注意事項
 
-- 若上游專案更動建置入口或產物路徑，你仍需調整 `scripts/build_cs300fvp_ubuntu.sh`。
-- 若你要「跟某次 git 結果完全一致」，請一定要固定 `CS300FVP_REF`，不要只用 branch。
+- 若上游專案更動建置入口或產物路徑，仍需調整 `scripts/build_cs300fvp_ubuntu.sh`。
+- 若要「跟某次 git 結果完全一致」，請一定要固定 `CS300FVP_REF`，不要只用 branch。
 
 
 ## 一步一步跑起來（新手版）
@@ -85,7 +81,7 @@ Mac 上傳 GitHub 的完整步驟請看：`docs/RUN_GUIDE.md` 的第 9 節。
 
 如果你看到我寫 `cd <repo-folder>` 卻不知道要填什麼，請照這個順序做：
 
-1. 先確認你目前在哪：
+1. 先確認目前在哪：
 
 ```bash
 pwd
@@ -97,7 +93,7 @@ pwd
 ls
 ```
 
-3. 如果你有看到 `1` 這個資料夾（本作業常見在 `/workspace/1`），就進去：
+3. 如有看到 `1` 這個資料夾（本作業常見在 `/workspace/1`），就進去：
 
 ```bash
 cd /workspace/1
@@ -109,13 +105,13 @@ cd /workspace/1
 pwd
 ```
 
-你應該會看到：
+應該會看到：
 
 ```text
 /workspace/1
 ```
 
-5. 確認這裡就是專案根目錄（要看到這些檔案）：
+5. 確認這裡就是專案根目錄：
 
 ```bash
 ls
@@ -123,4 +119,3 @@ ls
 
 至少要有：`Dockerfile`、`README.md`、`scripts/`、`docs/`。
 
-6. 然後就可以開始做 GitHub 設定（remote / push）。
